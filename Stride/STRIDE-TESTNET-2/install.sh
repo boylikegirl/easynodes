@@ -126,7 +126,7 @@ After=network.target
 [Service]
 Type=simple
 User=$USER
-ExecStart=$(which strided) start 
+ExecStart=$(which strided) start --address 'tcp://0.0.0.0:26758' --p2p.laddr 'tcp://0.0.0.0:26756' --rpc.laddr 'tcp://127.0.0.1:26757' --proxy_app 'tcp://127.0.0.1:26758' --grpc-web.address '0.0.0.0:9791' --grpc.address '0.0.0.0:9790'
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535

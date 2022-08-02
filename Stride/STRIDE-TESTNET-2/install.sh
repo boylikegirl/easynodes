@@ -173,7 +173,7 @@ break
 echo "============================================================"
 echo "节点catching_up为false的时候继续下一步"
 echo "============================================================"
-echo "节点状态 = $(curl -s localhost:26657/status | jq .result | jq .sync_info)"
+echo "节点状态 = $(curl -s localhost:26757/status | jq .result | jq .sync_info)"
 echo "区块高度 = $(teritorid status 2>&1 | jq ."SyncInfo"."latest_block_height")"
 echo "验证人状态 = $(strided q slashing signing-info $(strided tendermint show-validator))"
 echo "============================================================"
@@ -183,7 +183,7 @@ break
 "创建验证人")
 echo "============================================================"
 echo "节点状态为false的时候继续下一步!"
-echo "节点状态 = $(curl -s localhost:26657/status)"
+echo "节点状态 = $(curl -s localhost:26757/status)"
 echo "============================================================"
                
 strided tx staking create-validator \

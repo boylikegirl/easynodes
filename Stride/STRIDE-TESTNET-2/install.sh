@@ -384,7 +384,7 @@ After=network.target
 Type=simple
 User=$USER
 ExecStart=$(which hermes) start
-Restart=on-failure
+Restart=on-failure 
 RestartSec=5
 LimitNOFILE=6000
 [Install]

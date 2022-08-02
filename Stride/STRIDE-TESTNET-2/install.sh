@@ -126,7 +126,7 @@ After=network.target
 [Service]
 Type=simple
 User=$USER
-ExecStart=$(which strided) start
+ExecStart=$(which strided) start --address tcp://0.0.0.0:26758 --p2p.laddr tcp://0.0.0.0:26756 --rpc.laddr tcp://127.0.0.1:26757 --node tcp://localhost:26757
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -136,6 +136,7 @@ EOF
 
 sudo mv $HOME/strided.service /etc/systemd/system/
 
+cp -r /root/go/bin/strided /usr/local/bin
 # start service
 sudo systemctl daemon-reload
 sudo systemctl enable strided

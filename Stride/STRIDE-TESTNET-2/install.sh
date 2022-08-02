@@ -24,6 +24,7 @@ options=(
 "创建验证人" 
 "查看验证人"
 "运行IBC Relayer"
+"删除节点"
 "退出")
 select opt in "${options[@]}"
                do

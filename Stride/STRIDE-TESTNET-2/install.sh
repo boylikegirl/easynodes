@@ -126,7 +126,7 @@ After=network.target
 [Service]
 Type=simple
 User=$USER
-ExecStart=$(which strided) start --address 'tcp://0.0.0.0:26758' --p2p.laddr 'tcp://0.0.0.0:26756' --rpc.laddr 'tcp://127.0.0.1:26757' --node 'tcp://localhost:26757'
+ExecStart=$(which strided) start 
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535

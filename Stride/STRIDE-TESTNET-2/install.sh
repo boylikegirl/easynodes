@@ -197,8 +197,8 @@ strided tx staking create-validator \
   --pubkey $(strided tendermint show-validator) \
   --moniker $STRIDENODE \
   --chain-id $STRIDECHAIN \
-  --node tcp://localhost:26757
   --gas 300000 \
+  --node tcp://localhost:26757 \
   -y
 break
 ;;

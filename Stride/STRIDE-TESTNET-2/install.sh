@@ -178,7 +178,7 @@ echo "节点状态 = $(curl -s localhost:26757/status | jq .result | jq .sync_in
 echo "区块高度 = $(teritorid status 2>&1 | jq ."SyncInfo"."latest_block_height")"
 echo "验证人状态 = $(strided q slashing signing-info $(strided tendermint show-validator) --node tcp://localhost:26757)"
 echo "============================================================"
-break
+break 
 ;;
 
 "创建验证人")

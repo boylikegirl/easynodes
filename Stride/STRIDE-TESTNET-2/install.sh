@@ -207,15 +207,15 @@ break
 echo "============================================================"
 echo "节点名称: $STRIDENODE"
 echo "钱包地址: $STRIDEADDRWALL" 
-echo "钱包余额: $(strided query bank balances $STRIDEADDRWALL)"
+echo "钱包余额: $(strided query bank balances $STRIDEADDRWALL --node tcp://localhost:26757)"
 echo "============================================================"
 break
 ;;
 
 "查看验证人") 
 echo "============================================================"
-echo "Account request: $(strided q auth account $(strided keys show $STRIDEADDRWALL -a) -o text)"
-echo "Validator info: $(strided q staking validator $STRIDEVAL)"
+echo "Account request: $(strided q auth account $(strided keys show $STRIDEADDRWALL -a) --node tcp://localhost:26757 -o text)"
+echo "Validator info: $(strided q staking validator $STRIDEVAL --node tcp://localhost:26757)"
 echo "============================================================"
 break
 ;;

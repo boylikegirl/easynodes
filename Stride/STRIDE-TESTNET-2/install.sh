@@ -219,7 +219,7 @@ echo "Validator info: $(strided q staking validator $STRIDEVAL --node tcp://loca
 echo "============================================================"
 break
 ;;
-
+ 
 "水龙头获得测试币")
 request=$request
 echo "============================================================"

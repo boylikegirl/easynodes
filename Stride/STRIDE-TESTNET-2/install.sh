@@ -202,7 +202,7 @@ strided tx staking create-validator \
   -y
 break
 ;;
-
+ 
 "钱包余额")
 echo "============================================================"
 echo "节点名称: $STRIDENODE"
